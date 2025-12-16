@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo "stage-3"
+                sh 'python3 test.py' 
             }
         }
         stage('Test') { 
@@ -18,3 +18,7 @@ pipeline {
         }
     }
 }
+
+# how to run the python file form the jenkins file
+#  sh 'python3 your_script.py' 
+
